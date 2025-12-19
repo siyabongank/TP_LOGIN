@@ -1,0 +1,63 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f8;
+}
+
+/* Conteneur du formulaire */
+form {
+  width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+
+/* Espacement entre les éléments du formulaire */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Style pour les labels */
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+/* Style pour les champs de saisie */
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Style pour le bouton de connexion */
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Style pour les messages d'erreur */
+.error {
+  color: red;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #ffe6e6;
+  border-radius: 4px;
+}
