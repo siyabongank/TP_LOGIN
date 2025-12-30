@@ -33,17 +33,19 @@ export class LoginComponent {
         console.log('Login successful', response);
         this.router.navigate(['/home']); 
       },
-      error: (err) => {
-        console.error('Login error', err);
-        
-        if (err.status === 400) {
-          this.errorMessage = 'Invalid username or password.';
-        } else if (err.status === 500) {
-          this.errorMessage = 'Internal server error. Please try again later.';
-        } else {
-          this.errorMessage = 'An unexpected error occurred. Please try again.';
-        }
-      }
+       error: (err) => {
+  console.error('Login error', err);
+
+  if (err.error && err.error.message) {
+    this.errorMessage = err.error.message;
+  } else if (err.status === 401) {
+    this.errorMessage = 'Mot de passe incorrect.'
+  } else if (err.status === 500) {
+    this.errorMessage = 'Erreur serveur.';
+  } else {
+    this.errorMessage = 'Unexpected error';
+  }
+}
     });
   }
 }
